@@ -1,3 +1,5 @@
 from django.contrib import admin
+from todo.models import Task
 
-# Register your models here.
+# 新しいモデルを書く
+admin.site.register(Task)
