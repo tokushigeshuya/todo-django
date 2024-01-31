@@ -1,0 +1,7 @@
+<form action="" method="POST">
+  <!-- セキュリティトークン -->
+  {% csrf_token %}
+  <h2>{{task.pk}}.{{task.title}}</h2>
+  <p>このタスクを削除してもいいですか？</p>
+  <input type="submit" value="削除">
+</form>
