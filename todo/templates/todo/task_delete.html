@@ -1,3 +1,7 @@
+{% extends 'todo/base.html' %} 
+
+{% block content %}
+
 <form action="" method="POST">
   <!-- セキュリティトークン -->
   {% csrf_token %}
@@ -5,3 +9,9 @@
   <p>このタスクを削除してもいいですか？</p>
   <input type="submit" value="削除">
 </form>
+
+{% endblock content %}
+
+
+
+
