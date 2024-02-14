@@ -8,6 +8,25 @@
     <title>TodoApp</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'task-list' %}">TodoApp</a>
+        <div class="d-flex me-4">
+          <ul class="navbar-nav">
+            <!-- trueがログイン -->
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}">ログアウト</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'login' %}">ログイン</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class = "container">
       <div class="w-75 mx-auto">
         <!-- ヘッダー -->

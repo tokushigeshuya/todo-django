@@ -125,3 +125,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# ログイン設定
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'task-list'
+# ログアウト時の設定
+LOGOUT_REDIRECT_URL = 'task-list'
